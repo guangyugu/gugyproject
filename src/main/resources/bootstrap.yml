@@ -1,0 +1,29 @@
+# 这个配置不能放到application.yml中，因为优化级关系
+# 配置consul访问acl-token
+# consul.token:
+spring:
+  application:
+    name: gugy-project
+  cloud:
+    consul:
+      config:
+        enabled: true
+        format: yaml
+        # 必须加载配置成功能启动应用
+        # 【警告】无配置时不会报错，仍然启动系统
+        fail-fast: true
+        default-context: ${spring.application.name}
+      discovery:
+        tags: version=@project.version@,build.time=@maven.build.timestamp@
+        #health-check-path: /${spring.application.name}/actuator/health
+        instanceId: ${spring.application.name}-${spring.cloud.client.ip-address}-${server.port}
+        prefer-ip-address: true
+        heartbeat:
+          enabled: true
+  datasource:
+    name: ${spring.application.name}
+    # 使用hikari数据源
+    type: com.zaxxer.hikari.HikariDataSource
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
