@@ -1,8 +1,9 @@
-#gugyÍ¨ÓÃ¿ò¼Ü
-Í¨ÓÃmapper²å¼şÉú³É´úÂë£º
+#gugyé€šç”¨æ¡†æ¶
+#
+é€šç”¨mapperæ’ä»¶ç”Ÿæˆä»£ç ï¼š
 mvn mybatis-generator:generate
 #
-pagehelper·ÖÒ³²å¼ş
+pagehelperåˆ†é¡µæ’ä»¶
 #
-consulÅäÖÃÖĞĞÄ
+consulé…ç½®ä¸­å¿ƒ
 
