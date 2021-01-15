@@ -53,6 +53,13 @@
             <version>${pageHelper-version}</version>
         </dependency>
 
+        <!-- japi文档依赖 -->
+        <dependency>
+            <groupId>io.github.yedaxia</groupId>
+            <artifactId>japidocs</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+
 
 
         <!-- consul注册中心、配置中心依赖start -->
