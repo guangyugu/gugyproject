@@ -1,10 +1,13 @@
 package org.gugy.gugyproject.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;
 
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = -123165461321651L;
     /**
      * Ö÷¼üid
      */

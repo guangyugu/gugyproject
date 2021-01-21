@@ -2,6 +2,7 @@ package org.gugy.gugyproject.controller;
 
 import org.gugy.gugyproject.entity.User;
 import org.gugy.gugyproject.entity.query.UserQuery;
+import org.gugy.gugyproject.entity.receive.UserReceive;
 import org.gugy.gugyproject.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,20 +24,27 @@ public class UserController {
     @Resource
     private UserService userService;
 
+
     /**
      * 获取用户列表
+     *
      * @param query 查询参数
      * @return 用户列表
      */
     @GetMapping("/getList")
     public List<User> getUserList(UserQuery query) {
+        System.out.println("11111");
         return userService.getUserList(query);
     }
 
+    /**
+     * 新增用户
+     *
+     * @param receive 接收类
+     * @return 新增用户id
+     */
     @PostMapping("/add")
-    public Long addUser(){
-//         userService.addUser();
-        return null;
+    public Long addUser(UserReceive receive) {
+        return userService.addUser(receive);
     }
-
 }

@@ -2,6 +2,7 @@ package org.gugy.gugyproject.service;
 
 import org.gugy.gugyproject.entity.User;
 import org.gugy.gugyproject.entity.query.UserQuery;
+import org.gugy.gugyproject.entity.receive.UserReceive;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,8 +22,8 @@ public interface UserService {
 
     /**
      * 新增用户
-     * @param user
+     * @param receive
      * @return
      */
-    Long addUser(User user);
+    Long addUser(UserReceive receive);
 }
