@@ -6,4 +6,6 @@ mvn mybatis-generator:generate
 pagehelper分页插件
 #
 consul配置中心
+#
+RabbitMq消息队列
 
